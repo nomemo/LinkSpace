@@ -1,40 +1,83 @@
-<!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-/*        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-*/      }
-    </style>
-
+    <link href="checkbox.css" rel="stylesheet">
     <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+    - JavaScript and HTML must be in separate files: see our Content Security
+    - Policy documentation[1] for details and explanation.
+    -
+    - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
   </head>
+
   <body>
-    <button id="SaveNew">Save current tabs</button>
+<!--     <button id="SaveNew">Save current tabs</button>
+    
     <p>TabMark</p>
     <ol id="SaveTabSpace">
-      <la>123</la>
     </ol>
+ -->
+
+
+
+<!-- Source: http://codepen.io/vorbei/pen/gLtpK -->
+<div id="todoContainer" class="container">
+    <div class="header">
+        <h1>
+            My Tab Space 
+<!--             <span class="stats">
+                (<span id="remainTodo">2</span>/<span id="totalTodo">3</span>)
+            </span> -->
+            <span class="tools">
+<!--            <a href="javascript:;" id = "resetTodo">reset</a>
+                <a href="javascript:;" id="deleteAll">delete all</a>
+                <a href="javascript:;" id="clearFinished">clear finished</a>
+ -->           
+                <a href="#" id="clear">Delete all</a>
+
+            </span>
+        </h1>
+    </div>
+    <div class="todoForm">
+        <input type="text" placeholder="Save all current window's tabs as TabSpace." id="todoInput"/>
+<!--         <a href="javascript:" id="todoAdd" class="button">add</a>
+ -->     
+        <a href="#" id="createNew" class="button">Create</a>
+    </div>
+
+    <ol class="todoList">
+<!--         <p class="msg">
+            You've done everything! Add some more.
+        </p>
+ -->       
+<!--         <li>
+            <input type="checkbox">
+          
+            <span>Delete me in the first time.</span>
+            <a href="#" class="delete">delete</a>
+            <a href="#" class="load">load</a>
+        </li> -->
+
+<!--         <li>
+            <span>Delete me in the first time.</span>
+            <a href="javascript:" class="delete">delete</a>
+            <a href="javascript:" class="load">load</a>
+        </li>
+ -->
+<!--         <li class="done">
+            <input type="checkbox" checked><span>Call Mom.</span>
+            <a href="javascript:" class="delete">delete</a>
+        </li>
+        <li>
+            <input type="checkbox"><span>Call Dad.</span>
+            <a href="javascript:" class="delete">delete</a>                
+        </li>
+ -->   
+     </ol>
+</div>
+
+
   </body>
 </html>
-

@@ -1,0 +1,137 @@
+/*http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting?answertab=votes#tab-top*/
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: #f1f3f5;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+}
+
+.container{
+    width: 500px;
+    margin:0 auto;
+    background:#fff;
+    border:1px solid #e1e3e5;
+    border-top:none;
+    min-height: 500px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1)
+}
+
+.header{
+    background: #29abe2;
+    color:white;
+    line-height:56px;
+    padding: 0 10px;
+}
+.header a, .header .stats{
+    color:white;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+.header a:hover{
+    opacity:1;
+}
+
+.header h1{
+    font-size: 18px;
+}
+
+.header .tools{
+    float:right;
+}
+
+.todoList{
+    padding: 5px 0 0;
+}
+
+.todoList p.msg{
+    display: none;
+    color: #ccc;
+    padding: 20px 15px;
+    position:relative;
+}
+.todoList.empty p.msg{
+    display:block;
+}
+
+.todoList li{
+    list-style: none;
+    padding:10px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.todoList li:hover{
+    background: #f9fbfe;
+}
+
+.todoList .load {
+	float: right;
+	margin-left: 10px;
+}
+
+.todoList .delete{
+    float: right;
+	margin-left: 10px;
+}
+
+
+.todoList li span{
+    margin-left: 10px;
+}
+
+.todoList li.done span{
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+
+.todoForm{
+    padding: 15px 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #e1e3e5;
+}
+
+.todoForm .button{
+    font-size: 14px;
+    padding: 3px 8px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f3f5), color-stop(100%,#e1e3e5));
+    border: 1px solid #e1e3e5;
+    color: #444;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.todoForm .button:hover{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f3f5), color-stop(100%,#d5d7d9));
+}
+
+.todoForm .button:active{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e3e5), color-stop(100%,#f1f3f5));    
+}
+
+.todoForm input[type="text"]{
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px 5px;
+    width:400px;
+    border:1px solid #e1e3e5;
+}
+
+input:focus{
+    outline:none;
+}
